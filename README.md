@@ -1,8 +1,7 @@
-<p align="center">
-    <img src="https://user-images.githubusercontent.com/41773797/109554629-5f8e2400-7acc-11eb-8c93-a43a370ad311.jpg" alt="Package banner" style="width: 100%; max-width: 800px;" />
-</p>
+# <p align="center">Admin Panel by Apricode Lab</p>
 
 <p align="center">
+    <a href="https://github.com/laravel-filament"><img src="https://user-images.githubusercontent.com/41773797/109554629-5f8e2400-7acc-11eb-8c93-a43a370ad311.jpg" alt="Package banner" style="width: 150px; height: 27px; object-fit: cover; object-position: center" /></a>
     <a href="https://github.com/laravel-filament/filament/actions"><img alt="Tests passing" src="https://img.shields.io/badge/Tests-passing-green?style=for-the-badge&logo=github"></a>
     <a href="https://laravel.com"><img alt="Laravel v8.x" src="https://img.shields.io/badge/Laravel-v8.x-FF2D20?style=for-the-badge&logo=laravel"></a>
     <a href="https://laravel-livewire.com"><img alt="Livewire v2.x" src="https://img.shields.io/badge/Livewire-v2.x-FB70A9?style=for-the-badge"></a>
