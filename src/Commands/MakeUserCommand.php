@@ -43,13 +43,13 @@ class MakeUserCommand extends Command
 
         if (Filament::auth()->getProvider()->getModel()::count() === 1 && $this->confirm('Would you like to show some love by starring the repo?', true)) {
             if (PHP_OS_FAMILY === 'Darwin') {
-                exec('open https://github.com/laravel-filament/filament');
+                exec('open https://github.com/arm092/apricode-admin');
             }
             if (PHP_OS_FAMILY === 'Linux') {
-                exec('xdg-open https://github.com/laravel-filament/filament');
+                exec('xdg-open https://github.com/arm092/apricode-admin');
             }
             if (PHP_OS_FAMILY === 'Windows') {
-                exec('start https://github.com/laravel-filament/filament');
+                exec('start https://github.com/arm092/apricode-admin');
             }
 
             $this->line('Thank you!');

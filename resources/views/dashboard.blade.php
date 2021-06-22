@@ -29,7 +29,7 @@
                                 </a>
 
                                 @if ($version = \Filament\Filament::version())
-                                    <a href="https://github.com/laravel-filament/filament/releases" target="_blank" class="px-4 py-2 font-mono text-xs text-gray-800 transition duration-200 bg-white border border-gray-300 rounded shadow-sm cursor-pointer focus:ring focus:ring-opacity-50 hover:bg-gray-100 focus:ring-primary-200">
+                                    <a href="https://github.com/arm092/apricode-admin/releases/" target="_blank" class="px-4 py-2 font-mono text-xs text-gray-800 transition duration-200 bg-white border border-gray-300 rounded shadow-sm cursor-pointer focus:ring focus:ring-opacity-50 hover:bg-gray-100 focus:ring-primary-200">
                                         {{ $version }}
                                     </a>
                                 @endif
@@ -37,7 +37,7 @@
 
                             <ul class="space-y-1 text-sm">
                                 <li><a href="https://filamentadmin.com/docs" target="_blank" class="link">{{ __('filament::dashboard.widgets.filament.links.documentation.label') }}</a></li>
-                                <li><a href="https://github.com/laravel-filament/filament" target="_blank" class="link">{{ __('filament::dashboard.widgets.filament.links.repository.label') }}</a></li>
+                                <li><a href="https://github.com/arm092/apricode-admin" target="_blank" class="link">{{ __('filament::dashboard.widgets.filament.links.repository.label') }}</a></li>
                             </ul>
                         </div>
                     </div>
