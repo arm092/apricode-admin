@@ -1,5 +1,4 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
-const colors = require('tailwindcss/colors')
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
   purge: {
@@ -17,72 +16,92 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Commissioner', ...defaultTheme.fontFamily.sans],
-        mono: ['Space Mono', ...defaultTheme.fontFamily.mono],
+        sans: ['Noto Sans', ...defaultTheme.fontFamily.sans],
+        mono: ['JetBrains Mono', ...defaultTheme.fontFamily.mono],
+        display: ['Montserrat', ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        primary: {
-            100: 'var(--f-primary-100)',
-            200: 'var(--f-primary-200)',
-            300: 'var(--f-primary-300)',
-            400: 'var(--f-primary-400)',
-            500: 'var(--f-primary-500)',
-            600: 'var(--f-primary-600)',
-            700: 'var(--f-primary-700)',
-            800: 'var(--f-primary-800)',
-            900: 'var(--f-primary-900)',
-        },
-        success: {
-            100: 'var(--f-success-100)',
-            200: 'var(--f-success-200)',
-            300: 'var(--f-success-300)',
-            400: 'var(--f-success-400)',
-            500: 'var(--f-success-500)',
-            600: 'var(--f-success-600)',
-            700: 'var(--f-success-700)',
-            800: 'var(--f-success-800)',
-            900: 'var(--f-success-900)',
-        },
-        danger: {
-            100: 'var(--f-danger-100)',
-            200: 'var(--f-danger-200)',
-            300: 'var(--f-danger-300)',
-            400: 'var(--f-danger-400)',
-            500: 'var(--f-danger-500)',
-            600: 'var(--f-danger-600)',
-            700: 'var(--f-danger-700)',
-            800: 'var(--f-danger-800)',
-            900: 'var(--f-danger-900)',
-        },
-        gray: {
-            100: 'var(--f-gray-100)',
-            200: 'var(--f-gray-200)',
-            300: 'var(--f-gray-300)',
-            400: 'var(--f-gray-400)',
-            500: 'var(--f-gray-500)',
-            600: 'var(--f-gray-600)',
-            700: 'var(--f-gray-700)',
-            800: 'var(--f-gray-800)',
-            900: 'var(--f-gray-900)',
-        },
-        blue: {
-            100: 'var(--f-blue-100)',
-            200: 'var(--f-blue-200)',
-            300: 'var(--f-blue-300)',
-            400: 'var(--f-blue-400)',
-            500: 'var(--f-blue-500)',
-            600: 'var(--f-blue-600)',
-            700: 'var(--f-blue-700)',
-            800: 'var(--f-blue-800)',
-            900: 'var(--f-blue-900)',
-        },
-        white: 'var(--f-white)',
-        defaultPrimary: colors.lightBlue,
-        defaultSuccess: colors.emerald,
-        defaultDanger: colors.rose,
-        defaultGray: colors.coolGray,
-        defaultBlue: colors.blue,
-        defaultWhite: colors.white
+          primary: {
+              "50" : "#ffc951",
+              "100": "#ffbf47",
+              "200": "#ffb53d",
+              "300": "#ffab33",
+              "400": "#ffa129",
+              "500": "#fd971f",
+              "600": "#f38d15",
+              "700": "#e9830b",
+              "800": "#df7901",
+              "900": "#d56f00"
+          },
+          secondary: {
+              "50" : "#595a54",
+              "100": "#4f504a",
+              "200": "#454640",
+              "300": "#3b3c36",
+              "400": "#31322c",
+              "500": "#272822",
+              "600": "#1d1e18",
+              "700": "#13140e",
+              "800": "#090a04",
+              "900": "#000000"
+          },
+          success: {
+              "50" : "#d8ff60",
+              "100": "#ceff56",
+              "200": "#c4ff4c",
+              "300": "#baf642",
+              "400": "#b0ec38",
+              "500": "#a6e22e",
+              "600": "#9cd824",
+              "700": "#92ce1a",
+              "800": "#88c410",
+              "900": "#7eba06"
+          },
+          danger: {
+              "50" : "#ff58a4",
+              "100": "#ff4e9a",
+              "200": "#ff4490",
+              "300": "#ff3a86",
+              "400": "#ff307c",
+              "500": "#f92672",
+              "600": "#ef1c68",
+              "700": "#e5125e",
+              "800": "#db0854",
+              "900": "#d1004a"
+          },
+          gray: {
+              "50" : "#81827c",
+              "100": "#777872",
+              "200": "#6d6e68",
+              "300": "#63645e",
+              "400": "#595a54",
+              "500": "#4f504a",
+              "600": "#454640",
+              "700": "#3b3c36",
+              "800": "#31322c",
+              "900": "#272822"
+          },
+          blue: {
+              "50" : "#98ffff",
+              "100": "#8effff",
+              "200": "#84f7ff",
+              "300": "#7aedff",
+              "400": "#70e3f9",
+              "500": "#66d9ef",
+              "600": "#5ccfe5",
+              "700": "#52c5db",
+              "800": "#48bbd1",
+              "900": "#3eb1c7"
+          },
+        white: '#ffffff',
+        black: '#000000',
+        defaultPrimary: this.primary,
+        defaultSecondary: this.secondary,
+        defaultSuccess: this.success,
+        defaultDanger: this.danger,
+        defaultGray: this.gray,
+        defaultBlue: this.blue,
+        defaultWhite: this.white
       },
       keyframes: {
         shake: {
@@ -104,9 +123,9 @@ module.exports = {
         DEFAULT: {
           css: {
             a: {
-              color: theme('colors.secondary.700'),
+              color: theme('colors.blue.500'),
               '&:hover': {
-                color: theme('colors.secondary.500'),
+                color: theme('colors.blue.700'),
               },
             },
           },
