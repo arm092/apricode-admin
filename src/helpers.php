@@ -50,9 +50,7 @@ if (! function_exists('Filament\get_asset_id')) {
             return null;
         }
 
-        $id = (string) Str::of($path)->after('id=');
-
-        return $id;
+        return (string) Str::of($path)->after('id=');
     }
 }
 
@@ -78,7 +76,7 @@ if (! function_exists('Filament\get_media_contents')) {
         $disk = Storage::disk(config('filament.default_filesystem_disk'));
 
         if (! $disk->exists($path)) {
-            return;
+            return '';
         }
 
         return $disk->get($path);
