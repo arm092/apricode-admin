@@ -8,7 +8,7 @@
     <a href="https://php.net"><img alt="PHP 7.4" src="https://img.shields.io/badge/PHP-7.4-777BB4?style=for-the-badge&logo=php"></a>
 </p>
 
-We try to customize Filament Dashboard for us, and our projects.
+We try to customize <a href="https://github.com/laravel-filament/filament" target="_blank">Filament Dashboard</a> for us, and our projects.
 We added some features (ex. Favicon support), and disabled ones, that not needed (ex. Theme Support).
 Filament is a content management framework for rapidly building a beautiful administration interface designed for humans.
 
