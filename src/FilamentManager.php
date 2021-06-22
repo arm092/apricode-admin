@@ -223,6 +223,6 @@ class FilamentManager
             return null;
         }
 
-        return InstalledVersions::getPrettyVersion('filament/filament');
+        return InstalledVersions::getPrettyVersion('arm092/apricode-admin');
     }
 }
