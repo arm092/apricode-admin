@@ -1,4 +1,5 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
+const colors = require('tailwindcss/colors');
 
 module.exports = {
   purge: {
@@ -95,13 +96,6 @@ module.exports = {
           },
         white: '#ffffff',
         black: '#000000',
-        defaultPrimary: this.primary,
-        defaultSecondary: this.secondary,
-        defaultSuccess: this.success,
-        defaultDanger: this.danger,
-        defaultGray: this.gray,
-        defaultBlue: this.blue,
-        defaultWhite: this.white
       },
       keyframes: {
         shake: {
