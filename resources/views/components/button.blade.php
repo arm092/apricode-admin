@@ -8,15 +8,17 @@
 
 @php
     $colorClasses = [
-        'danger' => 'border-transparent bg-danger-600 text-white hover:bg-danger-700 focus:ring-danger-200',
-        'primary' => 'border-transparent bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-200',
-        'white' => 'border-gray-300 bg-white text-gray-800 hover:bg-gray-100 focus:ring-primary-200',
+        'danger'    => 'border-transparent bg-danger-500 text-gray-900 hover:bg-danger-700 focus:ring-danger-200',
+        'success'   => 'border-transparent bg-success-500 text-gray-900 hover:bg-success-700 focus:ring-success-200',
+        'primary'   => 'border-transparent bg-primary-500 text-gray-900 hover:bg-primary-700 focus:ring-primary-200',
+        'white'     => 'border-gray-500 bg-white text-gray-900 hover:bg-gray-100 focus:ring-secondary-200',
+        'secondary' => 'border-transparent bg-secondary-500 text-white hover:bg-gray-100 focus:ring-secondary-200',
     ][$color];
 
     $disabledClasses = $disabled ? 'opacity-25 cursor-not-allowed' : '';
 
     $sizeClasses = [
-        'base' => 'text-sm py-2 px-4',
+        'base'  => 'text-sm py-2 px-6',
         'small' => 'text-xs py-1 px-3',
     ][$size];
 

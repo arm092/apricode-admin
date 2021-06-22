@@ -9,6 +9,15 @@
       --f-primary-700: theme('colors.defaultPrimary.700');
       --f-primary-800: theme('colors.defaultPrimary.800');
       --f-primary-900: theme('colors.defaultPrimary.900');
+      --f-secondary-100: theme('colors.defaultSecondary.100');
+      --f-secondary-200: theme('colors.defaultSecondary.200');
+      --f-secondary-300: theme('colors.defaultSecondary.300');
+      --f-secondary-400: theme('colors.defaultSecondary.400');
+      --f-secondary-500: theme('colors.defaultSecondary.500');
+      --f-secondary-600: theme('colors.defaultSecondary.600');
+      --f-secondary-700: theme('colors.defaultSecondary.700');
+      --f-secondary-800: theme('colors.defaultSecondary.800');
+      --f-secondary-900: theme('colors.defaultSecondary.900');
       --f-success-100: theme('colors.defaultSuccess.100');
       --f-success-200: theme('colors.defaultSuccess.200');
       --f-success-300: theme('colors.defaultSuccess.300');

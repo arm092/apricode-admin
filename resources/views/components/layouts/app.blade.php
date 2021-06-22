@@ -13,7 +13,7 @@
             <header role="banner"
                     tabindex="-1"
                     id="banner"
-                    class="flex flex-col flex-grow space-y-4 overflow-y-auto text-gray-400 bg-gray-800 shadow-lg md:shadow-none">
+                    class="flex flex-col flex-grow space-y-4 overflow-y-auto text-gray-400 bg-gray-900 shadow-lg md:shadow-none">
                 <x-filament::branding.app />
 
                 <x-filament-nav class="flex-grow px-4 overflow-y-auto" />
