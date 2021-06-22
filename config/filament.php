@@ -205,4 +205,16 @@ return [
 
     'cache_path_prefix' => 'filament/cache',
 
+    /*
+    |--------------------------------------------------------------------------
+    | Path of Logo File
+    |--------------------------------------------------------------------------
+    |
+    | This is the path of the admin panel logo, which will be used for
+    | site icon and logo of admin panel.
+    |
+    */
+
+    'logo_path' => asset('images/logo.svg'),
+
 ];
