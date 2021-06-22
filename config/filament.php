@@ -215,6 +215,6 @@ return [
     |
     */
 
-    'logo_path' => asset('images/logo.svg'),
+    'logo_path' => public_path('images/logo.svg'),
 
 ];
