@@ -1,15 +1,20 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" dir="{{ trans('filament::layout.direction') == 'rtl' ? 'rtl' : 'ltr' }}" class="antialiased bg-gray-100 js-focus-visible">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" dir="{{ trans('filament::layout.direction') === 'rtl' ? 'rtl' : 'ltr' }}" class="antialiased bg-gray-100 js-focus-visible">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <!-- Icons -->
+    <meta itemProp="logo" content="{{config('filament.logo_path')}}">
+    <link rel="apple-touch-icon" sizes="any" type="image/svg+xml" href="{{config('filament.logo_path')}}"/>
+    <link rel="favicon" sizes="any" type="image/svg+xml" href="{{config('filament.logo_path')}}"/>
+    <link rel="shortcut icon" sizes="any" type="image/svg+xml" href="{{config('filament.logo_path')}}"/>
 
     <title>{{ __($title) ?? null }} {{ __($title) ?? false ? '|' : null }} {{ config('app.name') }}</title>
 
     @livewireStyles
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Commissioner:wght@200;300;400;500;600;700&amp;family=JetBrains+Mono:ital@0;1&amp;display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;1,300&family=Montserrat:wght@400;700&family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ route('filament.asset', [
         'id' => Filament\get_asset_id('/css/filament.css'),
         'path' => 'css/filament.css',
@@ -28,7 +33,7 @@
     @stack('filament-styles')
 </head>
 
-<body class="text-gray-600">
+<body class="text-gray-900">
     {{ $slot }}
 
     <x-filament::notification />
