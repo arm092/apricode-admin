@@ -24,12 +24,12 @@
                     <div class="flex items-center justify-between h-full">
                         <div class="w-full space-y-6">
                             <div class="flex items-center justify-between w-full space-x-4 rtl:space-x-reverse">
-                                <a href="https://filamentadmin.com" target="_blank" class="transition-colors duration-200 hover:text-primary-700">
-                                    <x-filament::logo class="h-auto w-28" />
+                                <a href="https://web.apricode.am" target="_blank" class="transition-colors duration-200 hover:text-primary-700">
+                                    Admin Panel by <x-filament::logo class="h-auto w-28" />
                                 </a>
 
                                 @if ($version = \Filament\Filament::version())
-                                    <a href="https://github.com/arm092/apricode-admin/releases/" target="_blank" class="px-4 py-2 font-mono text-xs text-gray-800 transition duration-200 bg-white border border-gray-300 rounded shadow-sm cursor-pointer focus:ring focus:ring-opacity-50 hover:bg-gray-100 focus:ring-primary-200">
+                                    <a href="https://github.com/arm092/apricode-admin/releases/" target="_blank" class="px-4 py-2 font-mono text-xs text-gray-900 transition duration-200 bg-white border border-gray-500 rounded shadow-sm cursor-pointer focus:ring focus:ring-opacity-50 hover:bg-gray-100 hover:text-light focus:ring-primary-200">
                                         {{ $version }}
                                     </a>
                                 @endif

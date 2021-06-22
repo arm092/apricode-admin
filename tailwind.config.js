@@ -93,8 +93,9 @@ module.exports = {
               "800": "#48bbd1",
               "900": "#3eb1c7"
           },
-        white: '#ffffff',
-        black: '#000000',
+          white: '#ffffff',
+          black: '#000000',
+          light: '#f8f8f2'
       },
       keyframes: {
         shake: {
