@@ -6,6 +6,7 @@ module.exports = {
     content: [
       './src/**/*.php',
       './resources/views/**/*.php',
+      './resources/views/components/**/*.php',
       './resources/js/**/*.js',
       './packages/forms/src/**/*.php',
       './packages/forms/resources/views/**/*.php',
