@@ -6,7 +6,7 @@
             aria-label="{{ __('filament::widgets.title') }}"
             class="grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8"
         >
-            @if (config('filament.widgets.default.account', true))
+            @if (config('apricode.widgets.default.account', true))
                 <x-filament::card class="flex">
                     <div class="flex items-center space-x-4 rtl:space-x-reverse">
                         <x-filament-avatar :user="\Filament\Filament::auth()->user()" :size="160" class="flex-shrink-0 w-20 h-20 rounded-full" />
@@ -19,7 +19,7 @@
                 </x-filament::card>
             @endif
 
-            @if (config('filament.widgets.default.info', true))
+            @if (config('apricode.widgets.default.info', true))
                 <x-filament::card>
                     <div class="flex items-center justify-between h-full">
                         <div class="w-full space-y-6">

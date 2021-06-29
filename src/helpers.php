@@ -73,7 +73,7 @@ if (! function_exists('Filament\get_image_url')) {
 if (! function_exists('Filament\get_media_contents')) {
     function get_media_contents($path)
     {
-        $disk = Storage::disk(config('filament.default_filesystem_disk'));
+        $disk = Storage::disk(config('apricode.default_filesystem_disk'));
 
         if (! $disk->exists($path)) {
             return '';

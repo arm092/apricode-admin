@@ -19,7 +19,7 @@ class Logout extends Component
         Filament::auth()->logout();
 
         return redirect()->route(
-            config('filament.auth.logout_redirect_route', 'filament.auth.login'),
+            config('apricode.auth.logout_redirect_route', 'filament.auth.login'),
         );
     }
 }

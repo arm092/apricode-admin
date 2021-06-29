@@ -31,7 +31,7 @@ class LogoutTest extends TestCase
             return true;
         })->name('filament.testing.auth.custom-logout-redirect');
 
-        $this->app['config']->set('filament.auth.logout_redirect_route', 'filament.testing.auth.custom-logout-redirect');
+        $this->app['config']->set('apricode.auth.logout_redirect_route', 'filament.testing.auth.custom-logout-redirect');
 
         $user = User::factory()->create();
 

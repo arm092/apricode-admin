@@ -32,12 +32,12 @@ class FilamentManager
 
     public function auth()
     {
-        return Auth::guard(config('filament.auth.guard', 'filament'));
+        return Auth::guard(config('apricode.auth.guard', 'filament'));
     }
 
     public function avatarProvider()
     {
-        $provider = config('filament.avatar_provider', GravatarProvider::class);
+        $provider = config('apricode.avatar_provider', GravatarProvider::class);
 
         return new $provider;
     }
@@ -214,7 +214,7 @@ class FilamentManager
 
     public function userResource()
     {
-        return config('filament.user_resource', UserResource::class);
+        return config('apricode.user_resource', UserResource::class);
     }
 
     public function version()

@@ -96,7 +96,7 @@ class UserResource extends Resource
                             ->label('filament::resources/user-resource.form.avatar.label')
                             ->avatar()
                             ->directory('filament-avatars')
-                            ->disk(config('filament.default_filesystem_disk'));
+                            ->disk(config('apricode.default_filesystem_disk'));
                     }
 
                     return $schema;

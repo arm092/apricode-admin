@@ -9,14 +9,14 @@ use Illuminate\Routing\Middleware\ValidateSignature;
 use Illuminate\Support\Facades\Route;
 
 Route::name('filament.')
-    ->middleware(config('filament.middleware.base'))
-    ->domain(config('filament.domain'))
-    ->prefix(config('filament.path'))
+    ->middleware(config('apricode.middleware.base'))
+    ->domain(config('apricode.domain'))
+    ->prefix(config('apricode.path'))
     ->group(function () {
         Route::get('assets/{path}', Controllers\AssetController::class)->where('path', '.*')->name('asset');
 
         // Authentication
-        Route::middleware(config('filament.middleware.guest'))->name('auth.')->group(function () {
+        Route::middleware(config('apricode.middleware.guest'))->name('auth.')->group(function () {
             Route::get('login', Livewire\Auth\Login::class)->name('login');
             Route::get('forgot-password', Livewire\Auth\RequestPassword::class)->name('password.request');
             Route::get('reset-password/{token}', Livewire\Auth\ResetPassword::class)->middleware([ValidateSignature::class])->name('password.reset');
@@ -26,7 +26,7 @@ Route::name('filament.')
         Route::get('image/{path}', Controllers\ImageController::class)->where('path', '.*')->name('image');
 
         // Authenticated routes
-        Route::middleware(config('filament.middleware.auth'))->group(function () {
+        Route::middleware(config('apricode.middleware.auth'))->group(function () {
             foreach (Filament::getPages() as $page) {
                 Route::get($page::route()->uri, $page)->name('pages.' . $page::route()->name);
             }

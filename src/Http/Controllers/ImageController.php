@@ -17,10 +17,10 @@ class ImageController extends Controller
 
             $server = ServerFactory::create([
                 'base_url' => 'image',
-                'cache' => Storage::disk(config('filament.cache_disk'))->getDriver(),
-                'cache_path_prefix' => config('filament.cache_path_prefix'),
+                'cache' => Storage::disk(config('apricode.cache_disk'))->getDriver(),
+                'cache_path_prefix' => config('apricode.cache_path_prefix'),
                 'response' => new LaravelResponseFactory(app('request')),
-                'source' => Storage::disk(config('filament.default_filesystem_disk'))->getDriver(),
+                'source' => Storage::disk(config('apricode.default_filesystem_disk'))->getDriver(),
             ]);
 
             return $server->getImageResponse($path, request()->all());

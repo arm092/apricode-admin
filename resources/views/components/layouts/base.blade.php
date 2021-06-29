@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Icons -->
-    <meta itemProp="logo" content="{{config('filament.logo_path')}}">
-    <link rel="apple-touch-icon" sizes="any" type="image/svg+xml" href="{{config('filament.logo_path')}}"/>
-    <link rel="favicon" sizes="any" type="image/svg+xml" href="{{config('filament.logo_path')}}"/>
-    <link rel="shortcut icon" sizes="any" type="image/svg+xml" href="{{config('filament.logo_path')}}"/>
+    <meta itemProp="logo" content="{{config('apricode.logo_path')}}">
+    <link rel="apple-touch-icon" sizes="any" type="image/svg+xml" href="{{config('apricode.logo_path')}}"/>
+    <link rel="favicon" sizes="any" type="image/svg+xml" href="{{config('apricode.logo_path')}}"/>
+    <link rel="shortcut icon" sizes="any" type="image/svg+xml" href="{{config('apricode.logo_path')}}"/>
 
     <title>{{ __($title) ?? null }} {{ __($title) ?? false ? '|' : null }} {{ config('app.name') }}</title>
 

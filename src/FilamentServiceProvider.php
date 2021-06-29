@@ -38,7 +38,7 @@ class FilamentServiceProvider extends ServiceProvider
 
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__ . '/../config/filament.php', 'filament');
+        $this->mergeConfigFrom(__DIR__ . '/../config/apricode.php', 'apricode');
 
         $this->registerIcons();
 
@@ -135,8 +135,8 @@ class FilamentServiceProvider extends ServiceProvider
         ], 'filament-assets');
 
         $this->publishes([
-            __DIR__ . '/../config/filament.php' => config_path('filament.php'),
-        ], 'filament-config');
+            __DIR__ . '/../config/apricode.php' => config_path('apricode.php'),
+        ], 'apricode-config');
 
         $this->publishes([
             __DIR__ . '/../resources/lang' => resource_path('lang/vendor/filament'),
@@ -179,7 +179,7 @@ class FilamentServiceProvider extends ServiceProvider
 
             $this->app['config']->set('forms', [
                 'default_attachment_upload_route' => 'filament.form-attachments.upload',
-                'default_filesystem_disk' => $this->app['config']->get('filament.default_filesystem_disk'),
+                'default_filesystem_disk' => $this->app['config']->get('apricode.default_filesystem_disk'),
             ]);
         });
     }
@@ -188,11 +188,11 @@ class FilamentServiceProvider extends ServiceProvider
     {
         $filesystem = new Filesystem();
 
-        $filesystem->ensureDirectoryExists(config('filament.pages.path'));
+        $filesystem->ensureDirectoryExists(config('apricode.pages.path'));
 
-        collect($filesystem->allFiles(config('filament.pages.path')))
+        collect($filesystem->allFiles(config('apricode.pages.path')))
             ->map(function ($file) {
-                return (string) Str::of(config('filament.pages.namespace'))
+                return (string) Str::of(config('apricode.pages.namespace'))
                     ->append('\\', $file->getRelativePathname())
                     ->replace(['/', '.php'], ['\\', '']);
             })
@@ -207,11 +207,11 @@ class FilamentServiceProvider extends ServiceProvider
     {
         $filesystem = new Filesystem();
 
-        $filesystem->ensureDirectoryExists(config('filament.resources.path'));
+        $filesystem->ensureDirectoryExists(config('apricode.resources.path'));
 
-        collect($filesystem->allFiles(config('filament.resources.path')))
+        collect($filesystem->allFiles(config('apricode.resources.path')))
             ->map(function ($file) {
-                return (string) Str::of(config('filament.resources.namespace'))
+                return (string) Str::of(config('apricode.resources.namespace'))
                     ->append('\\', $file->getRelativePathname())
                     ->replace(['/', '.php'], ['\\', '']);
             })
@@ -226,11 +226,11 @@ class FilamentServiceProvider extends ServiceProvider
     {
         $filesystem = new Filesystem();
 
-        $filesystem->ensureDirectoryExists(config('filament.roles.path'));
+        $filesystem->ensureDirectoryExists(config('apricode.roles.path'));
 
-        collect($filesystem->allFiles(config('filament.roles.path')))
+        collect($filesystem->allFiles(config('apricode.roles.path')))
             ->map(function ($file) {
-                return (string) Str::of(config('filament.roles.namespace'))
+                return (string) Str::of(config('apricode.roles.namespace'))
                     ->append('\\', $file->getRelativePathname())
                     ->replace(['/', '.php'], ['\\', '']);
             })
@@ -245,11 +245,11 @@ class FilamentServiceProvider extends ServiceProvider
     {
         $filesystem = new Filesystem();
 
-        $filesystem->ensureDirectoryExists(config('filament.widgets.path'));
+        $filesystem->ensureDirectoryExists(config('apricode.widgets.path'));
 
-        collect($filesystem->allFiles(config('filament.widgets.path')))
+        collect($filesystem->allFiles(config('apricode.widgets.path')))
             ->map(function ($file) {
-                return (string) Str::of(config('filament.widgets.namespace'))
+                return (string) Str::of(config('apricode.widgets.namespace'))
                     ->append('\\', $file->getRelativePathname())
                     ->replace(['/', '.php'], ['\\', '']);
             })
