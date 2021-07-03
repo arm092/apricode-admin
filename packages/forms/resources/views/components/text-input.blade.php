@@ -7,9 +7,9 @@
     :label="$formComponent->getLabel()"
     :required="$formComponent->isRequired()"
 >
-    <div class="flex border-gray-300 rounded shadow-sm">
+    <div class="flex border-secondary-100 rounded shadow-sm">
         @if ($formComponent->getPrefix())
-            <span class="inline-flex items-center px-3 text-gray-500 border border-r-0 border-gray-300 rounded-l bg-gray-50 whitespace-nowrap sm:text-sm">
+            <span class="inline-flex items-center px-3 text-gray-500 border border-r-0 border-secondary-100 rounded-l bg-gray-50 whitespace-nowrap sm:text-sm">
                 {!! $formComponent->getPrefix() !!}
             </span>
         @endif
@@ -25,12 +25,12 @@
             {!! $formComponent->getPlaceholder() ? "placeholder=\"{$formComponent->getPlaceholder()}\"" : null !!}
             {!! $formComponent->isRequired() ? 'required' : null !!}
             {!! $formComponent->getType() ? "type=\"{$formComponent->getType()}\"" : null !!}
-            class="block w-full placeholder-gray-400 focus:placeholder-gray-500 placeholder-opacity-100 focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50 {{ ! $formComponent->getPrefix() ? 'rounded-l-md' : null }} {{ ! $formComponent->getPostfix() ? 'rounded-r-md' : null }} {{ $errors->has($formComponent->getName()) ? 'border-danger-600 motion-safe:animate-shake' : 'border-gray-300' }}"
+            class="block w-full placeholder-gray-400 focus:placeholder-gray-500 placeholder-opacity-100 focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50 {{ ! $formComponent->getPrefix() ? 'rounded-l-md' : null }} {{ ! $formComponent->getPostfix() ? 'rounded-r-md' : null }} {{ $errors->has($formComponent->getName()) ? 'border-danger-600 motion-safe:animate-shake' : 'border-secondary-100' }}"
             {!! Filament\format_attributes($formComponent->getExtraAttributes()) !!}
         />
 
         @if ($formComponent->getPostfix())
-            <span class="inline-flex items-center px-3 text-gray-500 border border-l-0 border-gray-300 rounded-r bg-gray-50 whitespace-nowrap sm:text-sm">
+            <span class="inline-flex items-center px-3 text-gray-500 border border-l-0 border-secondary-100 rounded-r bg-gray-50 whitespace-nowrap sm:text-sm">
                 {!!  $formComponent->getPostfix() !!}
             </span>
         @endif

@@ -415,7 +415,7 @@
                 aria-label="{{ __($formComponent->getPlaceholder()) }}"
             @endunless
             type="button"
-            class="bg-white relative w-full border rounded shadow-sm pl-3 pr-10 py-2 text-left cursor-default focus-within:border-blue-300 focus-within:ring focus-within:ring-blue-200 focus-within:ring-opacity-50 {{ $formComponent->isDisabled() ? 'text-gray-500' : '' }} {{ $errors->has($formComponent->getName()) ? 'border-danger-600 motion-safe:animate-shake' : 'border-gray-300' }}"
+            class="bg-white relative w-full border rounded shadow-sm pl-3 pr-10 py-2 text-left cursor-default focus-within:border-blue-300 focus-within:ring focus-within:ring-blue-200 focus-within:ring-opacity-50 {{ $formComponent->isDisabled() ? 'text-gray-500' : '' }} {{ $errors->has($formComponent->getName()) ? 'border-danger-600 motion-safe:animate-shake' : 'border-secondary-100' }}"
         >
             <input
                 readonly
@@ -437,7 +437,7 @@
                 aria-modal="true"
                 role="dialog"
                 x-cloak
-                class="absolute z-10 w-64 p-4 my-1 bg-white border border-gray-300 rounded shadow-sm"
+                class="absolute z-10 w-64 p-4 my-1 bg-white border border-secondary-100 rounded shadow-sm"
             >
                 <div class="space-y-3">
                     <div class="flex items-center justify-between space-x-1 rtl:space-x-reverse">

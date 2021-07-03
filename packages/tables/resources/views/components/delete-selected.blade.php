@@ -80,7 +80,7 @@
                                 <button
                                     x-on:click="open = false"
                                     type="button"
-                                    class="px-4 py-2 text-sm font-medium text-gray-800 transition duration-200 bg-white border border-gray-300 rounded shadow-sm cursor-pointer focus:ring focus:ring-opacity-50 hover:bg-gray-100 focus:ring-primary-200"
+                                    class="px-4 py-2 text-sm font-medium text-gray-800 transition duration-200 bg-white border border-secondary-100 rounded shadow-sm cursor-pointer focus:ring focus:ring-opacity-50 hover:bg-gray-100 focus:ring-primary-200"
                                 >
                                     {{ __('tables::table.delete.modal.buttons.cancel.label') }}
                                 </button>

@@ -220,11 +220,11 @@
                 placeholder="{{ __($formComponent->getPlaceholder()) }}"
                 toolbar="trix-toolbar-{{ $formComponent->getId() }}"
                 x-ref="trix"
-                class="block w-full prose placeholder-gray-400 placeholder-opacity-100 bg-white border-gray-300 rounded shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50 max-w-none"
+                class="block w-full prose placeholder-gray-400 placeholder-opacity-100 bg-white border-secondary-100 rounded shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50 max-w-none"
                 {!! Filament\format_attributes($formComponent->getExtraAttributes()) !!}
             />
         @else
-            <div x-html="value" class="p-3 prose border border-gray-300 rounded shadow-sm"></div>
+            <div x-html="value" class="p-3 prose border border-secondary-100 rounded shadow-sm"></div>
         @endunless
     </div>
 </x-forms::field-group>

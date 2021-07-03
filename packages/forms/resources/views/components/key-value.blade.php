@@ -128,7 +128,7 @@
         class="space-y-4"
         {!! Filament\format_attributes($formComponent->getExtraAttributes()) !!}
     >
-        <div class="overflow-x-auto bg-white border border-gray-300 rounded">
+        <div class="overflow-x-auto bg-white border border-secondary-100 rounded">
             <table class="min-w-full divide-y divide-gray-200">
                 <thead class="bg-gray-200">
                     <tr class="divide-x divide-gray-300">
@@ -166,7 +166,7 @@
                             @endif
                         >
                             @if ($formComponent->isSortable())
-                                <td x-show="isSortable" class="w-10 border-r border-gray-300 whitespace-nowrap">
+                                <td x-show="isSortable" class="w-10 border-r border-secondary-100 whitespace-nowrap">
                                     <div class="flex items-center justify-center">
                                         <button class="text-gray-600 hover:text-gray-800" data-sort-handle>
                                             <x-heroicon-o-menu-alt-4 class="w-4 h-4" />
@@ -174,7 +174,7 @@
                                     </div>
                                 </td>
                             @endif
-                            <td class="border-r border-gray-300 whitespace-nowrap">
+                            <td class="border-r border-secondary-100 whitespace-nowrap">
                                 <input
                                     type="text"
                                     placeholder="{{ __($formComponent->getKeyPlaceholder()) }}"
@@ -196,7 +196,7 @@
                                 >
                             </td>
                             @if ($formComponent->canDeleteRows())
-                                <td x-show="shouldShowDeleteButton()" class="w-10 border-l border-gray-300 whitespace-nowrap">
+                                <td x-show="shouldShowDeleteButton()" class="w-10 border-l border-secondary-100 whitespace-nowrap">
                                     <div class="flex items-center justify-center">
                                         <button
                                             type="button"

@@ -13,13 +13,13 @@
             <header role="banner"
                     tabindex="-1"
                     id="banner"
-                    class="flex flex-col flex-grow space-y-4 overflow-y-auto text-gray-400 bg-gray-900 shadow-lg md:shadow-none">
+                    class="flex flex-col flex-grow space-y-4 overflow-y-auto text-secondary-100 bg-gray-900 shadow-lg md:shadow-none">
                 <x-filament::branding.app />
 
                 <x-filament-nav class="flex-grow px-4 overflow-y-auto" />
 
                 <x-filament::dropdown
-                    class="flex items-center flex-grow w-full p-4 space-x-3 rtl:space-x-reverse text-left transition-colors duration-200 hover:text-white hover:bg-gray-900">
+                    class="flex items-center flex-grow w-full p-4 space-x-3 rtl:space-x-reverse text-left transition-colors duration-200 hover:text-light hover:bg-gray-900">
                     <x-slot name="button">
                         <x-filament-avatar :user="\Filament\Filament::auth()->user()" :size="32" class="flex-shrink-0 w-8 h-8 rounded-full" />
 

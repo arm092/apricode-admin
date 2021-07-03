@@ -21,7 +21,7 @@
                         {{ $records->count() && $records->count() === count($selected) ? 'checked' : null }}
                         wire:click="toggleSelectAll"
                         type="checkbox"
-                        class="border-gray-300 rounded shadow-sm text-primary-600 focus:border-primary-600 focus:ring focus:ring-primary-200 focus:ring-opacity-50"
+                        class="border-secondary-100 rounded shadow-sm text-primary-600 focus:border-primary-600 focus:ring focus:ring-primary-200 focus:ring-opacity-50"
                     />
                 </th>
 
@@ -79,7 +79,7 @@
                             {{ in_array($record->getKey(), $selected) ? 'checked' : null }}
                             wire:click="toggleSelected('{{ $record->getKey() }}')"
                             type="checkbox"
-                            class="border-gray-300 rounded shadow-sm text-primary-600 focus:border-primary-600 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+                            class="border-secondary-100 rounded shadow-sm text-primary-600 focus:border-primary-600 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
                         />
                     </td>
 

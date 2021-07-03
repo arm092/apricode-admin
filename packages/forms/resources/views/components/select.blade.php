@@ -232,7 +232,7 @@
             aria-haspopup="listbox"
             tabindex="1"
             @endunless
-            class="bg-white relative w-full border rounded shadow-sm pl-3 pr-10 py-2 text-left cursor-default focus-within:border-blue-300 focus-within:ring focus-within:ring-blue-200 focus-within:ring-opacity-50 {{ $formComponent->isDisabled() ? 'text-gray-500' : '' }} {{ $errors->has($formComponent->getName()) ? 'border-danger-600 motion-safe:animate-shake' : 'border-gray-300' }}"
+            class="bg-white relative w-full border rounded shadow-sm pl-3 pr-10 py-2 text-left cursor-default focus-within:border-blue-300 focus-within:ring focus-within:ring-blue-200 focus-within:ring-opacity-50 {{ $formComponent->isDisabled() ? 'text-gray-500' : '' }} {{ $errors->has($formComponent->getName()) ? 'border-danger-600 motion-safe:animate-shake' : 'border-secondary-100' }}"
         >
             <input
                 x-show="! open"
@@ -282,7 +282,7 @@
                 x-bind:aria-activedescendant="focusedOptionIndex ? '{{ $formComponent->getName() }}' + 'Option' + focusedOptionIndex : null"
                 tabindex="-1"
                 x-cloak
-                class="absolute z-50 w-full my-1 bg-white border border-gray-300 rounded shadow-sm"
+                class="absolute z-50 w-full my-1 bg-white border border-secondary-100 rounded shadow-sm"
             >
                 <ul
                     x-ref="listboxOptionsList"

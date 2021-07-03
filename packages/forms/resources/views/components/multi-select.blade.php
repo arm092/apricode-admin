@@ -227,7 +227,7 @@
                 x-bind:aria-expanded="open"
                 aria-haspopup="listbox"
                 tabindex="1"
-                class="bg-white relative w-full border rounded shadow-sm pl-3 pr-10 py-2 text-left cursor-default focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50 {{ $formComponent->isDisabled() ? 'text-gray-500' : '' }} {{ $errors->has($formComponent->getName()) ? 'border-danger-600 motion-safe:animate-shake' : 'border-gray-300' }}"
+                class="bg-white relative w-full border rounded shadow-sm pl-3 pr-10 py-2 text-left cursor-default focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50 {{ $formComponent->isDisabled() ? 'text-gray-500' : '' }} {{ $errors->has($formComponent->getName()) ? 'border-danger-600 motion-safe:animate-shake' : 'border-secondary-100' }}"
             >
                 <span
                     x-show="! open"
@@ -262,7 +262,7 @@
                 x-bind:aria-activedescendant="focusedOptionIndex ? '{{ $formComponent->getName() }}' + 'Option' + focusedOptionIndex : null"
                 tabindex="-1"
                 x-cloak
-                class="absolute z-10 w-full my-1 bg-white rounded shadow-sm border border-gray-300"
+                class="absolute z-10 w-full my-1 bg-white rounded shadow-sm border border-secondary-100"
             >
                 <ul
                     x-ref="listboxOptionsList"
@@ -309,7 +309,7 @@
                         x-on:click="unselectOption(key)"
                     @endunless
                     type="button"
-                    class="my-1 w-full flex justify-between space-x-2 rtl:space-x-reverse items-center font-mono text-xs py-2 px-3 border border-gray-300 bg-gray-100 text-gray-800 rounded shadow-sm relative @unless($formComponent->isDisabled()) cursor-pointer transition duration-200 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 hover:bg-gray-200 transition-colors duration-200 @else cursor-default @endunless"
+                    class="my-1 w-full flex justify-between space-x-2 rtl:space-x-reverse items-center font-mono text-xs py-2 px-3 border border-secondary-100 bg-gray-100 text-gray-800 rounded shadow-sm relative @unless($formComponent->isDisabled()) cursor-pointer transition duration-200 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 hover:bg-gray-200 transition-colors duration-200 @else cursor-default @endunless"
                 >
                     <span x-text="initialOptions[key] ?? key"></span>
 

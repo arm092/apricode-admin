@@ -17,7 +17,7 @@
             {!! $formComponent->getName() ? "{$formComponent->getBindingAttribute()}=\"{$formComponent->getName()}\"" : null !!}
             type="checkbox"
             {!! $formComponent->isRequired() ? 'required' : null !!}
-            class="rounded text-primary-600 shadow-sm focus:border-primary-700 focus:ring focus:ring-blue-200 focus:ring-opacity-50 {{ $errors->has($formComponent->getName()) ? 'border-danger-600 ' : 'border-gray-300' }}"
+            class="rounded text-primary-600 shadow-sm focus:border-primary-700 focus:ring focus:ring-blue-200 focus:ring-opacity-50 {{ $errors->has($formComponent->getName()) ? 'border-danger-600 ' : 'border-secondary-100' }}"
             {!! Filament\format_attributes($formComponent->getExtraAttributes()) !!}
         />
     @if ($formComponent->isInline())

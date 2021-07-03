@@ -27,7 +27,7 @@
 
                 <div class="flex-shrink-0 flex">
                     <button @click="show = false"
-                            class="text-gray-400 hover:text-white transition-colors duration-200 focus:outline-none">
+                            class="text-secondary-100 hover:text-light transition-colors duration-200 focus:outline-none">
                         <span class="sr-only">Close</span>
 
                         <x-heroicon-o-x class="w-5 h-5 fill-current" />
