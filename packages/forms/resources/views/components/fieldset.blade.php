@@ -17,7 +17,7 @@
 @endphp
 
 <fieldset
-    class="{{ $columnSpanClass }} {{ $formComponent->getLabel() ? 'rounded border border-gray-200 p-4 md:p-6' : null }}">
+    class="{{ $columnSpanClass }} {{ $formComponent->getLabel() ? 'rounded border border-secondary-100 p-4 md:p-6' : null }}">
     @if ($formComponent->getLabel())
         <legend class="text-sm leading-tight font-medium px-2">
             {{ __($formComponent->getLabel()) }}
