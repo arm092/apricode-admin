@@ -22,7 +22,7 @@
         'small' => 'text-xs py-1 px-3',
     ][$size];
 
-    $classes = "cursor-pointer font-medium border rounded transition duration-200 shadow-md focus:ring focus:ring-opacity-50 {$colorClasses} {$disabledClasses} {$sizeClasses}";
+    $classes = "cursor-pointer font-medium border rounded transition ease-in duration-200 shadow-md focus:ring focus:ring-opacity-50 {$colorClasses} {$disabledClasses} {$sizeClasses}";
 @endphp
 
 @unless ($href)
