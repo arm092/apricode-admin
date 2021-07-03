@@ -89,6 +89,6 @@
      * @link https://github.com/WICG/focus-visible#2-update-your-css
      */
   .js-focus-visible :focus:not([data-focus-visible-added]) {
-    @apply outline-none;
+    outline: none;
   }
 }
