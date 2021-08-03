@@ -3,7 +3,7 @@
 return [
 
     'button' => [
-        'label' => 'Logout',
+        'label' => 'Դուրս գալ',
     ],
 
 ];

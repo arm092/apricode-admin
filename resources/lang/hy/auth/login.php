@@ -5,7 +5,7 @@ return [
     'buttons' => [
 
         'submit' => [
-            'label' => 'Sign in',
+            'label' => 'Մուտք գործել',
         ],
 
     ],
@@ -13,25 +13,25 @@ return [
     'form' => [
 
         'email' => [
-            'label' => 'Email address',
+            'label' => 'Էլ․հասցե',
         ],
 
         'password' => [
-            'hint' => 'Forgot your password?',
-            'label' => 'Password',
+            'hint' => 'Մոռացե՞լ եք գաղտնաբառը',
+            'label' => 'Գաղտնաբառ',
         ],
 
         'remember' => [
-            'label' => 'Remember me',
+            'label' => 'Հիշել ինձ',
         ],
 
     ],
 
     'messages' => [
-        'failed' => 'These credentials do not match our records.',
-        'throttled' => 'Too many login attempts. Please try again in :seconds seconds.',
+        'failed' => 'Այս տվյալները չեն համապատասխանում ոչ մի օգտատիրոջը։',
+        'throttled' => 'Չափից ավել մուտք գործելու փորձ։ Փորձեք :seconds վարկյանից։',
     ],
 
-    'title' => 'Sign in to your account',
+    'title' => 'Մուտք գործեք ձեր հաշիվ',
 
 ];

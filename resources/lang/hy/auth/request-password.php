@@ -5,7 +5,7 @@ return [
     'buttons' => [
 
         'submit' => [
-            'label' => 'Send password reset link',
+            'label' => 'Ուղարկել գաղտնաբառի վերականգնման հղում',
         ],
 
     ],
@@ -13,24 +13,24 @@ return [
     'form' => [
 
         'email' => [
-            'hint' => 'Back to login',
-            'label' => 'Email address',
+            'hint'  => 'Վերադառնալ մուտքի էջ',
+            'label' => 'Էլ․հասցե',
         ],
 
     ],
 
     'messages' => [
 
-        'throttled' => 'Too many login attempts. Please try again in :seconds seconds.',
+        'throttled' => 'Չափից ավել մուտք գործելու փորձ։ Փորձեք :seconds վարկյանից։',
 
         'passwords' => [
-            'sent' => 'We have emailed your password reset link!',
-            'throttled' => 'Please wait before retrying.',
-            'user' => 'We can\'t find a user with that email address.',
+            'sent'      => 'Մենք էլ-փոստով ուղարկել ենք ձեր գաղտնաբառի վերականգնման հղումը:',
+            'throttled' => 'Խնդրում ենք սպասել նորից փորձելուց առաջ:',
+            'user'      => 'Մենք չենք կարող գտնել տվյալ էլ.հասցեով օգտվող:',
         ],
 
     ],
 
-    'title' => 'Reset password',
+    'title' => 'Վերականգնել գաղտնաբառը',
 
 ];

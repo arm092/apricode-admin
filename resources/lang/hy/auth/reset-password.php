@@ -5,7 +5,7 @@ return [
     'buttons' => [
 
         'submit' => [
-            'label' => 'Reset password',
+            'label' => 'Վերականգնել գաղտնաբառը',
         ],
 
     ],
@@ -13,15 +13,15 @@ return [
     'form' => [
 
         'email' => [
-            'label' => 'Email address',
+            'label' => 'Էլ․հասցե',
         ],
 
         'password' => [
-            'label' => 'Password',
+            'label' => 'Գաղտնաբառ',
         ],
 
         'passwordConfirmation' => [
-            'label' => 'Password confirmation',
+            'label' => 'Գաղտնաբառի հաստատում',
         ],
 
     ],
@@ -29,13 +29,13 @@ return [
     'messages' => [
 
         'passwords' => [
-            'throttled' => 'Please wait before retrying.',
-            'token' => 'This password reset token is invalid.',
-            'user' => 'We can\'t find a user with that email address.',
+            'throttled' => 'Խնդրում ենք սպասել նորից փորձելուց առաջ:',
+            'token'     => 'Գաղտնաբառի վերականգնման այս գաղտնանշանն անվավեր է:',
+            'user'      => 'Մենք չենք կարող գտնել տվյալ էլ.հասցեով օգտվող:',
         ],
 
     ],
 
-    'title' => 'Reset password',
+    'title' => 'Վերականգնել գաղտնաբառը',
 
 ];

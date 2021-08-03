@@ -5,11 +5,11 @@ return [
     'dropdown' => [
 
         'account' => [
-            'label' => 'Edit account',
+            'label' => 'Խմբագրել հաշիվը',
         ],
 
         'users' => [
-            'label' => 'Manage users',
+            'label' => 'Կառավարեք օգտվողներին',
         ],
 
     ],

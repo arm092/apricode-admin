@@ -36,7 +36,7 @@
                             </div>
 
                             <ul class="space-y-1 text-sm">
-                                <li><a href="https://filamentadmin.com/docs" target="_blank" class="link">{{ __('filament::dashboard.widgets.filament.links.documentation.label') }}</a></li>
+                                <li><a href="{{config('apricode.product_link')}}" target="_blank" class="link">{{ __('filament::dashboard.widgets.filament.links.product.label') }}</a></li>
                                 <li><a href="https://github.com/arm092/apricode-admin" target="_blank" class="link">{{ __('filament::dashboard.widgets.filament.links.repository.label') }}</a></li>
                             </ul>
                         </div>

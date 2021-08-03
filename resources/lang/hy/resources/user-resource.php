@@ -5,24 +5,24 @@ return [
     'form' => [
 
         'avatar' => [
-            'label' => 'Avatar',
+            'label' => 'Անձնանկար',
         ],
 
         'email' => [
-            'label' => 'Email address',
+            'label' => 'Էլ․հասցե',
         ],
 
         'isAdmin' => [
-            'label' => 'Filament admin?',
-            'helpMessage' => 'Filament admins are able to access all areas of Filament and manage other users.',
+            'label' => 'Ադմինիստրատո՞ր է',
+            'helpMessage' => 'Ադմինիստրատորները կարող են մուտք գործել բոլոր տեղեր և կառավարել այլ օգտվողների:',
         ],
 
         'isUser' => [
-            'label' => 'Filament user?',
+            'label' => 'Աշխատակի՞ց է',
         ],
 
         'name' => [
-            'label' => 'Name',
+            'label' => 'Անուն',
         ],
 
         'password' => [
@@ -30,8 +30,8 @@ return [
             'fieldset' => [
 
                 'label' => [
-                    'create' => 'Password',
-                    'edit' => 'Set a new password',
+                    'create' => 'Գաղտնաբառ',
+                    'edit' => 'Ստեղծել նոր գաղտնաբառ',
                 ],
 
             ],
@@ -39,11 +39,11 @@ return [
             'fields' => [
 
                 'password' => [
-                    'label' => 'Password',
+                    'label' => 'Գաղտնաբառ',
                 ],
 
                 'passwordConfirmation' => [
-                    'label' => 'Confirm password',
+                    'label' => 'Հաստատել գաղտնաբառը',
                 ],
 
             ],
@@ -51,8 +51,8 @@ return [
         ],
 
         'roles' => [
-            'label' => 'Roles',
-            'placeholder' => 'Select a role',
+            'label' => 'Կոչում',
+            'placeholder' => 'Ընտրեք կոչում',
         ],
 
     ],
@@ -62,11 +62,11 @@ return [
         'columns' => [
 
             'email' => [
-                'label' => 'Email address',
+                'label' => 'Էլ․հասցե',
             ],
 
             'name' => [
-                'label' => 'Name',
+                'label' => 'Անուն',
             ],
 
         ],
@@ -74,7 +74,7 @@ return [
         'filters' => [
 
             'administrators' => [
-                'label' => 'Administrators',
+                'label' => 'Ադմինիստրատորներ',
             ],
 
         ],

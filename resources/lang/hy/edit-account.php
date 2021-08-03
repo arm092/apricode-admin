@@ -5,15 +5,15 @@ return [
     'buttons' => [
 
         'save' => [
-            'label' => 'Save',
+            'label' => 'Պահպանել',
         ],
 
     ],
 
     'messages' => [
-        'saved' => 'Saved!',
+        'saved' => 'Պահպանված է',
     ],
 
-    'title' => 'Account',
+    'title' => 'Հաշիվ',
 
 ];
