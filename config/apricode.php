@@ -217,4 +217,26 @@ return [
 
     'logo_path' => 'images/logo.svg',
 
+    /*
+    |--------------------------------------------------------------------------
+    | Name of the Product
+    |--------------------------------------------------------------------------
+    |
+    | This is the name of the product, which shows in the footer
+    |
+    */
+
+    'product_name' => 'Admin Panel',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Name of the Product
+    |--------------------------------------------------------------------------
+    |
+    | This is the name of the product, which shows in the footer
+    |
+    */
+
+    'product_link' => 'https://web.apricode.am/',
+
 ];
