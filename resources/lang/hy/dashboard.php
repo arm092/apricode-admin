@@ -2,18 +2,18 @@
 
 return [
 
-    'title' => 'Dashboard',
+    'title' => 'Կառավարման կենտրոն',
 
     'widgets' => [
 
         'account' => [
 
-            'heading' => 'Welcome, :name',
+            'heading' => 'Բարի գալուստ, :name',
 
             'links' => [
 
                 'account' => [
-                    'label' => 'Manage your account',
+                    'label' => 'Հաշվի կառավարում',
                 ],
 
             ],
@@ -25,15 +25,15 @@ return [
             'links' => [
 
                 'documentation' => [
-                    'label' => 'Browse the documentation',
+                    'label' => 'Դիտեք փաստաթղթերը',
                 ],
 
                 'repository' => [
-                    'label' => 'Visit the repository',
+                    'label' => 'Այցելեք շտեմարան',
                 ],
 
                 'product' => [
-                    'label' => 'Visit the product\'s page',
+                    'label' => 'Այցելեք ապրանքի էջը',
                 ],
 
             ],
