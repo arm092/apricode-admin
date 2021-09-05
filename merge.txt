@@ -1,0 +1,3 @@
+* change config name
+* restore tailwind.config
+* replace gray-300 to secondary-100
