@@ -239,4 +239,15 @@ return [
 
     'product_link' => 'https://web.apricode.am/',
 
+    /*
+    |--------------------------------------------------------------------------
+    | Set is the admin panel multilingual
+    |--------------------------------------------------------------------------
+    |
+    | This is the boolean value that show if the admin panel needs multilingual support
+    |
+    */
+
+    'is_multilingual' => false,
+
 ];
