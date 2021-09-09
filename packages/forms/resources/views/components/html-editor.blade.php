@@ -4,18 +4,26 @@
 <style>
     .jodit-workplace {
         min-height: 250px;
-        @apply px-3;
+        padding: .5rem .75rem;
     }
-
+    .jodit-toolbar__box:not(:empty) {
+        border-radius: .375rem;
+        border: 1px solid rgba(157,153,134,1);
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-right: none;
+        border-left: none;
+        background-color: rgba(248,248,242,1);
+    }
+    .jodit-icon {
+        stroke: rgba(39,40,34,1);
+        fill: rgba(39,40,34,1);
+    }
     .jodit-container {
-        @apply rounded-md;
-        @apply border-secondary-100;
-        @apply focus:border-blue-300;
-        @apply focus:ring;
-        @apply focus:ring-blue-200;
-        @apply focus:ring-opacity-50 ;
+        border-radius: .375rem;
+        border: 1px solid rgba(157,153,134,1);
+        border-top: none;
     }
-
     .jodit-toolbar-button.jodit-toolbar-button_h1 {
         display: none;
     }
