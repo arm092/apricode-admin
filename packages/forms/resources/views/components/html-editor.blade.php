@@ -55,7 +55,7 @@
                     'inline': true,
                     'toolbarInlineForSelection': true,
                     'showPlaceholder': false,
-                    'buttons': 'source,paragraph,bold,italic,underline,strikethrough,eraser,ul,ol,left,center,right,fontsize,image,video,copyformat,hr,table,link'
+                    'buttons': '{{implode(',',$formComponent->getToolbarButtons())}}'
                 });
                 editor.value = value;
 

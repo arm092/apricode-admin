@@ -11,29 +11,36 @@ class HtmlEditor extends Field
     use Concerns\HasPlaceholder;
 
     protected $toolbarButtons = [
+        'source',
+        'paragraph',
         'bold',
-        'bullet',
-        'code',
-        'heading',
         'italic',
+        'underline',
+        'strikethrough',
+        'eraser',
+        'ul',
+        'ol',
+        'left',
+        'center',
+        'right',
+        'fontsize',
+        'image',
+        'video',
+        'copyformat',
+        'hr',
+        'table',
         'link',
-        'number',
-        'quote',
-        'redo',
-        'strike',
-        'subheading',
-        'undo',
     ];
 
     protected function setUp()
     {
-        $this->attachmentDisk(config('forms.default_filesystem_disk'));
-
-        $attachmentUploadUrl = route(config('forms.default_attachment_upload_route'));
-
-        if ($attachmentUploadUrl) {
-            $this->enableAttachments($attachmentUploadUrl);
-        }
+//        $this->attachmentDisk(config('forms.default_filesystem_disk'));
+//
+//        $attachmentUploadUrl = route(config('forms.default_attachment_upload_route'));
+//
+//        if ($attachmentUploadUrl) {
+//            $this->enableAttachments($attachmentUploadUrl);
+//        }
     }
 
     public function disableAllToolbarButtons()
@@ -48,12 +55,12 @@ class HtmlEditor extends Field
     public function disableToolbarButtons($buttonsToDisable)
     {
         $this->configure(function () use ($buttonsToDisable) {
-            if (! is_array($buttonsToDisable)) {
+            if (!is_array($buttonsToDisable)) {
                 $buttonsToDisable = [$buttonsToDisable];
             }
 
             $this->toolbarButtons = collect($this->getToolbarButtons())
-                ->filter(fn ($button) => ! in_array($button, $buttonsToDisable))
+                ->filter(fn($button) => !in_array($button, $buttonsToDisable))
                 ->toArray();
         });
 
@@ -63,7 +70,7 @@ class HtmlEditor extends Field
     public function enableToolbarButtons($buttonsToEnable)
     {
         $this->configure(function () use ($buttonsToEnable) {
-            if (! is_array($buttonsToEnable)) {
+            if (!is_array($buttonsToEnable)) {
                 $buttonsToEnable = [$buttonsToEnable];
             }
 
@@ -83,7 +90,7 @@ class HtmlEditor extends Field
         if (is_array($button)) {
             $buttons = $button;
 
-            return (bool) count(array_intersect($buttons, $this->getToolbarButtons()));
+            return (bool)count(array_intersect($buttons, $this->getToolbarButtons()));
         }
 
         return in_array($button, $this->getToolbarButtons());
