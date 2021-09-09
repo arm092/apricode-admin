@@ -110,9 +110,9 @@ class FilamentServiceProvider extends ServiceProvider
         $this->loadRoutesFrom(__DIR__ . '/../routes/web.php');
 
         $this->loadViewComponentsAs('filament', [
-            'avatar' => Components\Avatar::class,
-            'image' => Components\Image::class,
-            'nav' => Components\Nav::class,
+            Components\Avatar::class,
+            Components\Image::class,
+            Components\Nav::class,
         ]);
 
         $this->loadViewsFrom(__DIR__ . '/../resources/views', 'filament');
