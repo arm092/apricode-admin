@@ -10,7 +10,7 @@ let mix = require('laravel-mix')
  |
  */
 
-const SRC = 'resources'
+const SRC  = 'resources'
 const DIST = 'dist'
 
 mix.disableSuccessNotifications()
@@ -31,7 +31,7 @@ mix.js(`${SRC}/js/filament.js`, 'js')
  * @link https://laravel.com/docs/master/mix#postcss
  */
 mix.postCss(`${SRC}/css/filament.css`, 'css').options({
-  processCssUrls: false,
+    processCssUrls: false,
 })
 
 /**
@@ -45,14 +45,14 @@ mix.postCss(`${SRC}/css/filament.css`, 'css').options({
 mix.sourceMaps()
 
 if (mix.inProduction()) {
-  /**
-   * Versioning / Cache Busting
-   *
-   * After generating the versioned file, you won't know the exact file name.
-   * So, you should use Laravel's global mix function within your views
-   * to load the appropriately hashed asset.
-   *
-   * @link https://laravel.com/docs/master/mix#versioning-and-cache-busting
-   */
-  mix.version()
+    /**
+     * Versioning / Cache Busting
+     *
+     * After generating the versioned file, you won't know the exact file name.
+     * So, you should use Laravel's global mix function within your views
+     * to load the appropriately hashed asset.
+     *
+     * @link https://laravel.com/docs/master/mix#versioning-and-cache-busting
+     */
+    mix.version()
 }
