@@ -9,7 +9,7 @@
             @if (config('apricode.widgets.default.account', true))
                 <x-filament::card class="flex">
                     <div class="flex items-center space-x-4 rtl:space-x-reverse">
-                        <x-filament::avatar :user="\Filament\Filament::auth()->user()" :size="160" class="flex-shrink-0 w-20 h-20 rounded-full" />
+                        <x-filament-avatar :user="\Filament\Filament::auth()->user()" :size="160" class="flex-shrink-0 w-20 h-20 rounded-full" />
 
                         <div class="space-y-1">
                             <h2 class="text-2xl">{{ __('filament::dashboard.widgets.account.heading', ['name' => \Filament\Filament::auth()->user()->name]) }}</h2>
@@ -36,7 +36,7 @@
                             </div>
 
                             <ul class="space-y-1 text-sm">
-                                <li><a href="{{config('apricode.product_link')}}" target="_blank" class="link">{{ __('filament::dashboard.widgets.filament.links.product.label') }}</a></li>
+                                <li><a href="https://filamentadmin.com/docs" target="_blank" class="link">{{ __('filament::dashboard.widgets.filament.links.documentation.label') }}</a></li>
                                 <li><a href="https://github.com/arm092/apricode-admin" target="_blank" class="link">{{ __('filament::dashboard.widgets.filament.links.repository.label') }}</a></li>
                             </ul>
                         </div>

@@ -14,7 +14,7 @@
 
 <div class="overflow-x-auto bg-white rounded">
     <table class="min-w-full divide-y divide-gray-200">
-        <thead class="bg-gray-100">
+        <thead class="bg-gray-200">
             <tr>
                 <th class="w-4 p-4 whitespace-nowrap">
                     <input

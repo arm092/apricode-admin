@@ -3,7 +3,7 @@
 ])
 
 <div {{ $attributes->class([
-    'bg-white rounded p-4 md:p-6',
+    'bg-white rounded p-4 md:p-6 shadow-md',
     'col-span-full' => $expanded,
 ]) }}>
     {{ $slot }}
