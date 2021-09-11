@@ -52,21 +52,21 @@ class Form
         $defaults = [];
 
         foreach ($this->getSchema() as $component) {
-            $defaults = array_merge($defaults, $component->getDefaultValues());
+            $defaults[] = $component->getDefaultValues();
         }
 
-        return $defaults;
+        return [...$defaults];
     }
 
     public function getFlatSchema()
     {
-        $schema = $this->getSchema();
+        $schema = [$this->getSchema()];
 
         foreach ($this->schema as $component) {
-            $schema = array_merge($schema, $component->getSubform()->getFlatSchema());
+            $schema[] =  $component->getSubform()->getFlatSchema();
         }
 
-        return $schema;
+        return [...$schema];
     }
 
     public function getLivewire()
@@ -85,7 +85,8 @@ class Form
 
         foreach ($this->getSchema() as $component) {
             foreach ($component->getRules() as $name => $conditions) {
-                $rules[$name] = array_merge($rules[$name] ?? [], $conditions);
+                $mergeArray = [$rules[$name] ?? [], $conditions];
+                $rules[$name] = [...$mergeArray];
             }
         }
 
@@ -99,13 +100,13 @@ class Form
 
     public function getValidationAttributes()
     {
-        $attributes = $this->validationAttributes;
+        $attributes = [$this->validationAttributes];
 
         foreach ($this->getSchema() as $component) {
-            $attributes = array_merge($attributes, $component->getValidationAttributes());
+            $attributes[] = $component->getValidationAttributes();
         }
 
-        return $attributes;
+        return [...$attributes];
     }
 
     public function livewire($component)
