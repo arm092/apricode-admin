@@ -8,9 +8,11 @@ class Form extends \Filament\Forms\Form
 
     protected $model;
 
+    protected $isMultilingual = false;
+
     public function getColumns()
     {
-        if (! $this->hasWrapper) {
+        if (!$this->hasWrapper) {
             return collect(parent::getSchema())
                 ->first()
                 ->getColumns();
@@ -28,7 +30,7 @@ class Form extends \Filament\Forms\Form
     {
         $schema = parent::getSchema();
 
-        if (! $this->hasWrapper) {
+        if (!$this->hasWrapper) {
             return collect($schema)
                 ->first()
                 ->getSchema();
@@ -51,7 +53,7 @@ class Form extends \Filament\Forms\Form
 
     public function schema($schema)
     {
-        if (! is_array($schema)) {
+        if (!is_array($schema)) {
             $schema = [$schema];
 
             $this->withoutWrapper();
@@ -63,6 +65,13 @@ class Form extends \Filament\Forms\Form
     public function withoutWrapper()
     {
         $this->hasWrapper = false;
+
+        return $this;
+    }
+
+    public function multilingual()
+    {
+        $this->isMultilingual = true;
 
         return $this;
     }
