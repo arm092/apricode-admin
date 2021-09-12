@@ -85,8 +85,7 @@ class Form
 
         foreach ($this->getSchema() as $component) {
             foreach ($component->getRules() as $name => $conditions) {
-                $mergeArray = [$rules[$name] ?? [], $conditions];
-                $rules[$name] = [...$mergeArray];
+                $rules[$name] = [...($rules[$name] ?? []), ...$conditions];
             }
         }
 
