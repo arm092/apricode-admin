@@ -8,8 +8,6 @@ class Form extends \Filament\Forms\Form
 
     protected $model;
 
-    protected $isMultilingual = false;
-
     public function getColumns()
     {
         if (!$this->hasWrapper) {
@@ -65,13 +63,6 @@ class Form extends \Filament\Forms\Form
     public function withoutWrapper()
     {
         $this->hasWrapper = false;
-
-        return $this;
-    }
-
-    public function multilingual()
-    {
-        $this->isMultilingual = true;
 
         return $this;
     }
