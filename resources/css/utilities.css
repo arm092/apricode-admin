@@ -6,4 +6,10 @@
     a:focus-visible {
         outline: none;
     }
+
+    @media (max-width: 900px) {
+        .modal-window {
+            margin-top: -40rem;
+        }
+    }
 }

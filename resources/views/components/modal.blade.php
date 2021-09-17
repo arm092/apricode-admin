@@ -55,7 +55,7 @@
                 role="dialog"
                 aria-modal="true"
                 x-on:click.away="open = false"
-                {{ $attributes->only('class')->merge(['class' => 'inline-block text-left align-bottom transition-all transform sm:my-8 sm:align-middle']) }}
+                {{ $attributes->only('class')->merge(['class' => 'modal-window inline-block text-left align-bottom transition-all transform sm:my-8 sm:align-middle']) }}
             >
                 <div
                     class="flex flex-col space-y-4"
