@@ -54,7 +54,7 @@
                 x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                 role="dialog"
                 aria-modal="true"
-                x-on:click.away="open = false"
+                x-on:click.away="if (!$event.target.closest('.jodit-toolbar-button__button')) open = false"
                 {{ $attributes->only('class')->merge(['class' => 'modal-window inline-block text-left align-bottom transition-all transform sm:my-8 sm:align-middle']) }}
             >
                 <div
