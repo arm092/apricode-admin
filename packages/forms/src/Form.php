@@ -55,7 +55,7 @@ class Form
             $defaults[] = $component->getDefaultValues();
         }
 
-        return [...$defaults];
+        return array_merge(...$defaults);
     }
 
     public function getFlatSchema()
@@ -66,7 +66,7 @@ class Form
             $schema[] =  $component->getSubform()->getFlatSchema();
         }
 
-        return [...$schema];
+        return array_merge(...$schema);
     }
 
     public function getLivewire()
@@ -105,7 +105,7 @@ class Form
             $attributes[] = $component->getValidationAttributes();
         }
 
-        return [...$attributes];
+        return array_merge(...$attributes);
     }
 
     public function livewire($component)
