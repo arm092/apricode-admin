@@ -31,6 +31,10 @@
     .jodit-toolbar-button.jodit-toolbar-button_h1 {
         display: none;
     }
+
+    .jodit-wysiwyg {
+        cursor: text;
+    }
 </style>
 @endpushonce
 
@@ -53,35 +57,43 @@
         }"
         @unless ($formComponent->isDisabled())
         x-init="
-                editor = new Jodit('#' + '{{$formComponent->getId().$uuid}}',{
-                    'useSearch': false,
-                    'disablePlugins': 'about,iframe,indent,print,preview,file',
-                    'inline': true,
-                    'toolbarInlineForSelection': false,
-                    'showPlaceholder': false,
-                    'buttons': '{{implode(',',$formComponent->getToolbarButtons())}}',
-                    'buttonsXS': '{{implode(',',$formComponent->getToolbarButtons())}}',
-                });
+            editor = new Jodit('#' + '{{$formComponent->getId().$uuid}}',{
+                'useSearch': false,
+                'disablePlugins': 'about,iframe,indent,print,preview,file',
+                'inline': true,
+                'toolbarInlineForSelection': false,
+                'showPlaceholder': false,
+                'buttons': '{{implode(',',$formComponent->getToolbarButtons())}}',
+                'buttonsMD': '{{implode(',',$formComponent->getToolbarButtons())}}',
+                'buttonsSM': '{{implode(',',$formComponent->getToolbarButtons())}}',
+                'buttonsXS': '{{implode(',',$formComponent->getToolbarButtons())}}',
+            });
+
+            editor.value = value;
+
+            $watch('value', () => {
+                if (document.activeElement === $refs.jodit{{$uuid}}) return
+
                 editor.value = value;
-                $watch('value', () => {
-                    if (document.activeElement === $refs.jodit{{$uuid}}) return
-                    editor.value = value;
-                })
-            "
+            })
+        "
         x-on:change="
-                value = editor.value;
+            value = editor.value;
         "
         @endunless
         x-cloak
         wire:ignore
     >
         @unless ($formComponent->isDisabled())
-            <textarea {{ $formComponent->isAutofocused() ? 'autofocus' : null }}
-                      id="{{ $formComponent->getId().$uuid }}"
-                      placeholder="{{ __($formComponent->getPlaceholder()) }}"
-                      x-ref="jodit{{$uuid}}"
-                      wire:key="{{$uuid}}"
-                      class="block w-full prose placeholder-gray-400 placeholder-opacity-100 bg-white border-secondary-100 rounded shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50 max-w-none"
+            <textarea
+                {!! $formComponent->isAutofocused() ? 'autofocus' : null !!}
+                {!! $formComponent->getId() ? "id=\"{$formComponent->getId()}$uuid\"" : null !!}
+                {!! $formComponent->getName() ? "{$formComponent->getBindingAttribute()}=\"{$formComponent->getName()}\"" : null !!}
+                {!! $formComponent->getPlaceholder() ? "placeholder=\"{$formComponent->getPlaceholder()}\"" : null !!}
+                {!! $formComponent->isRequired() ? 'required' : null !!}
+                x-ref="jodit{{$uuid}}"
+                wire:key="{{$uuid}}"
+                class="block w-full prose placeholder-gray-400 placeholder-opacity-100 bg-white border-secondary-100 rounded shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50 max-w-none"
                 {!! Filament\format_attributes($formComponent->getExtraAttributes()) !!}></textarea>
         @else
             <div x-html="value" class="p-3 prose border border-secondary-100 rounded shadow-sm"></div>
